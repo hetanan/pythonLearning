@@ -26,7 +26,33 @@
 
 #second version using for loop
 
+# import random
+#
+# letters = ["a", "v", "r", "W", "T", "C"]
+# numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+# symbols = ["!", "@", "#", "$", "%", "^", "&", "*"]
+#
+# print("Welcome to the password generator!")
+# num_letters = int(input("How many letters would you like in password? "))
+# num_numbers = int(input("How many numbers would you like? "))
+# num_symbols = int(input("How many symbols would you like? "))
+#
+# password = ""
+# for letter in range(0, num_letters):
+#     password = password + random.choice(letters)
+#
+# for num in range(0, num_numbers):
+#     password = password + random.choice(numbers)
+#
+# for symbol in range(0, num_symbols):
+#     password = password + random.choice(symbols)
+#
+# print(password)
+
+# hard level using list
+
 import random
+from unittest import result
 
 letters = ["a", "v", "r", "W", "T", "C"]
 numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
@@ -37,14 +63,25 @@ num_letters = int(input("How many letters would you like in password? "))
 num_numbers = int(input("How many numbers would you like? "))
 num_symbols = int(input("How many symbols would you like? "))
 
-password = ""
+password_list = []
 for letter in range(0, num_letters):
-    password = password + random.choice(letters)
-
-for num in range(0, num_numbers):
-    password = password + random.choice(numbers)
-
+    # random_letter_list = (random.choice(letters))
+    # print(random_letter_list)
+    password_list.append(random.choice(letters))
+    print(password_list)
+for number in range(0, num_numbers):
+    password_list.append(random.choice(numbers))
+    print(password_list)
 for symbol in range(0, num_symbols):
-    password = password + random.choice(symbols)
+    password_list.append(random.choice(symbols))
+    print(password_list)
+random.shuffle(password_list)
+result="".join(password_list)
+print(result)
 
-print(password)
+# for num in range(0, num_numbers):
+#     password = password + random.choice(numbers)
+#
+# for symbol in range(0, num_symbols):
+#     password = password + random.choice(symbols)
+

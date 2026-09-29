@@ -1,5 +1,5 @@
 import random
-friends = ["Heta", "Jay", "Anay", "Vyoma"]
+friends = ["Amy", "Eva", "Ron", "Shane"]
 
 print(friends[0])
 print(friends)
